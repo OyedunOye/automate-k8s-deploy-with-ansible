@@ -1,0 +1,4 @@
+# python interpreter of the pipenv virtualenv (created with: pipenv install); looked up at run time
+ansible_python_interpreter: "{{ lookup('pipe', 'cd ' ~ playbook_dir ~ ' && pipenv --venv') }}/bin/python3"
+# kubeconfig for the EKS cluster (created with: aws eks update-kubeconfig --kubeconfig ./kubeconfig ...)
+kubeconfig_path: "{{ playbook_dir }}/kubeconfig"
